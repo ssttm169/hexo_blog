@@ -1,0 +1,55 @@
+# ===========================================
+# Site Settings
+# ===========================================
+# Header
+site_title: Tomtan's Blog
+site_description: 
+# ---Optional ---
+site_avatar: /images/avatar.jpg
+artical_license_statement: 
+# ---End Optional ---
+menu:
+  主页: /
+  归类: /archives
+  关于我: /about
+# display widgets
+widgets:
+- archives
+- recent_posts
+- tagcloud
+# widget behavior
+archive_type: 'monthly'
+show_count: true
+# Content
+excerpt_link: Read More
+# favico 
+favicon:
+
+# ===========================================
+# Miscellaneous Settings
+# ===========================================
+# Baidu Analytics
+baidu_analytics:
+# Google Analytics
+google_analytics:
+# Disqus
+disqus:
+  enable: false
+  shortname: troyyang-com
+  count: false
+# changyan
+changyan:
+  enable: false
+  appid:
+  appkey:
+# duoshuo
+duoshuo:
+  enable: false
+  shortname: tomtan
+# Visitors
+leancloud_visitors:
+  enable: false
+  app_id:
+  app_key:
+
+    
