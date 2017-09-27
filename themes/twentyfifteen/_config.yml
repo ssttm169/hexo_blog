@@ -14,6 +14,7 @@ menu:
   关于我: /about
 # display widgets
 widgets:
+- category
 - archives
 - recent_posts
 - tagcloud
@@ -29,9 +30,9 @@ favicon:
 # Miscellaneous Settings
 # ===========================================
 # Baidu Analytics
-baidu_analytics:
+baidu_analytics: a11b8c3c4528acd5dfd2af97a162d801
 # Google Analytics
-google_analytics:
+#google_analytics:
 # Disqus
 disqus:
   enable: false
@@ -48,8 +49,8 @@ duoshuo:
   shortname: tomtan
 # Visitors
 leancloud_visitors:
-  enable: false
-  app_id:
-  app_key:
+  enable: true
+  app_id: GThaKb1tSpVOD6q4uExWej2u-gzGzoHsz
+  app_key: B31FJeJ6CIix2v8rPIDM8KzA
 
     

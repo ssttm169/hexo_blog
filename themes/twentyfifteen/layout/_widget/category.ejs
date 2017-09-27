@@ -1,6 +1,8 @@
 <% if (site.categories.length){ %>
-  <div class="sidebar-module sidebar-module">
-		<h3 class="widget-title"><%= __('categories') %></h3>
-        <%- list_categories({show_count: theme.show_count}) %>
-    </div>
+<aside class="widget">
+        <h3 class="widget-title"><%= __('categories') %></h3>
+        <ul>
+            <%- list_categories({show_count: theme.show_count}) %>
+        </ul>
+    </aside>
 <% } %>
