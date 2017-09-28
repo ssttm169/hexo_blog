@@ -49,7 +49,7 @@ duoshuo:
   shortname: tomtan
 # Visitors
 leancloud_visitors:
-  enable: true
+  enable: false
   app_id: GThaKb1tSpVOD6q4uExWej2u-gzGzoHsz
   app_key: B31FJeJ6CIix2v8rPIDM8KzA
 

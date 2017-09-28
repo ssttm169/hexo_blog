@@ -7,12 +7,12 @@ title: Tomtan's Blog
 subtitle:
 description:
 author: Tomtan
-language: zh-CN
+language: zh-Hans
 timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://ssttm169.github.io/
+url: http://www.itomtan.com
 root: /
 permalink: :year-:month-:day-:title.html
 permalink_defaults:
@@ -72,7 +72,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: twentyfifteen
+theme: Yelee
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -81,3 +81,8 @@ deploy:
   repository: https://github.com/ssttm169/ssttm169.github.io.git
   branch: master
 
+
+
+search:
+  path: search.xml
+  field: post
