@@ -14,7 +14,7 @@ timezone: Asia/Shanghai
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://www.itomtan.com
 root: /
-permalink: :year-:month-:day-:title.html
+permalink: :year/:month/:day/:title/
 permalink_defaults:
 
 # Directory
@@ -34,7 +34,7 @@ titlecase: false # Transform title into titlecase
 external_link: true # Open external links in new tab
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:
@@ -74,15 +74,28 @@ pagination_dir: page
 ## Themes: https://hexo.io/themes/
 theme: Yelee
 
+plugin:
+  - hexo-generator-feed
+
+#Feed Atom
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+
+
+# sitemap
+sitemap:
+  path: sitemap.xml
+
+baidusitemap:
+  path: baidusitemap.xml
+
+
+
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy: 
   type: git
   repository: https://github.com/ssttm169/ssttm169.github.io.git
   branch: master
-
-
-
-search:
-  path: search.xml
-  field: post

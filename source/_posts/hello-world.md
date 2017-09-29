@@ -79,5 +79,8 @@ getCaretCharacterOffsetWithin() {
 
 为了方便测试，源代码调用了Vux的WechatEmotion组件，在编辑器中插件图片。
 
-[github源代码的网址](https://github.com/ssttm169/tom-editor)
+github源代码的网址如下：
+
+<div class="github-widget" data-repo="ssttm169/tom-editor"></div>
+
 
