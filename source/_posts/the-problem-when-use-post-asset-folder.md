@@ -11,13 +11,15 @@ typora-root-url: the-problem-when-use-post-asset-folder
 
 
 
-使用Hexo和github搭建博客，真是挺有趣的事情，因为于我们来说，随便敲几行代码，就可以拥有一个非常漂亮的博客。 但在写作的过程中，使用Typora(一个markdown编辑器)插入图片的时候，非常不顺手。后来了解到用hexo-asset-image可以提升我的写作效率,,所以开干。
+使用Hexo和github搭建博客，真是挺有趣的事情，因为对于我们来说，随便敲几行代码，就可以拥有一个非常漂亮的博客。 但在写作的过程中，使用Typora(一个markdown编辑器)插入图片的时候，非常不顺手。后来了解到用hexo-asset-image可以提升我的写作效率,,所以开始吧。
 
 <!-- more -->
 
 
 
 <br>
+
+
 
 
 
