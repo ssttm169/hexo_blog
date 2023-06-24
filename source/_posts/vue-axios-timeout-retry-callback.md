@@ -18,11 +18,11 @@ typora-root-url: vue-axios-timeout-retry-callback
 
 最近公司在做一个项目, 服务端数据接口用的是Php输出的API, 有时候在调用的过程中会失败, 在谷歌浏览器里边显示Provisional headers are shown。
 
-![](1.png)
+![](1.png.webp)
 
 
 
-按照搜索引擎给出来的解决方案，解决不了我的问题.   
+按照搜索引擎给出来的解决方案，解决不了我的问题.
 
 <br>
 
@@ -91,19 +91,19 @@ this.$axios.get(url, {params:{load:'noload'}}).then(function (response) {
 
 超时之后, 报出 Uncaught (in promise) Error: timeout of  xxx ms exceeded的错误。
 
-![](2.png)
+![](2.png.webp)
 
 在 catch那里，它返回的是error.request错误，所以就在这里做 retry的功能,  经过测试是可以实现重新请求的功功能， 虽然能够实现 超时重新请求的功能，但很麻烦，需要每一个请API的页面里边要设置重新请求。
 
-![](4.png)
+![](4.png.webp)
 
-看上面，我这个项目有几十个.vue 文件，如果每个页面都要去设置超时重新请求的功能，那我要疯掉的. 
+看上面，我这个项目有几十个.vue 文件，如果每个页面都要去设置超时重新请求的功能，那我要疯掉的.
 
 <br>
 
 而且这个机制还有一个严重的bug，就是被请求的链接失效或其他原因造成无法正常访问的时候，这个机制失效了，它不会等待我设定的6秒，而且一直在刷，一秒种请求几十次，很容易就把服务器搞垮了，请看下图, 一眨眼的功能，它就请求了146次。
 
-![](3.png)
+![](3.png.webp)
 
 <br>
 
@@ -157,26 +157,26 @@ axios.interceptors.response.use(undefined, function axiosRetryInterceptor(err) {
     var config = err.config;
     // If config does not exist or the retry option is not set, reject
     if(!config || !config.retry) return Promise.reject(err);
-    
+
     // Set the variable for keeping track of the retry count
     config.__retryCount = config.__retryCount || 0;
-    
+
     // Check if we've maxed out the total number of retries
     if(config.__retryCount >= config.retry) {
         // Reject with the error
         return Promise.reject(err);
     }
-    
+
     // Increase the retry count
     config.__retryCount += 1;
-    
+
     // Create new promise to handle exponential backoff
     var backoff = new Promise(function(resolve) {
         setTimeout(function() {
             resolve();
         }, config.retryDelay || 1);
     });
-    
+
     // Return the promise in which recalls axios to retry the request
     return backoff.then(function() {
         return axios(config);
@@ -192,7 +192,7 @@ axios.interceptors.response.use(undefined, function axiosRetryInterceptor(err) {
 
 以下是我做的一个试验。。把axios.defaults.retryDelay = 500, 请求 www.facebook.com
 
-![](5.png)
+![](5.png.webp)
 
 
 
